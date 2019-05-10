@@ -55,7 +55,7 @@ class RadioInput extends ChoiceControl implements IValidationInput
 		// has to run
 		parent::getControl();
 
-		$items = $this->getItems();
+		$items = $this->translate($this->getItems());
 		$container = $this->container;
 
 		$c = 0;
