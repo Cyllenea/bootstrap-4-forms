@@ -83,7 +83,7 @@ trait ChoiceInputTrait
 
 				// normal option
 				$option = Html::el('option',
-					array_merge(['value' => (string)$value], $optionArgs($value, $caption)));
+                    array_merge(['value' => (string)$value], array_merge($optionArgs($value, $caption), $caption instanceof Html ? $caption->attrs : [])));
 				$option->setText($caption);
 			}
 			$ret[] = $option;
