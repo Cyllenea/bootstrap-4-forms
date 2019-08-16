@@ -54,7 +54,7 @@ class SelectInput extends SelectBox implements IValidationInput
 			$options = [NULL => $this->prompt] + $options;
 		}
 
-		$optList = $this->makeOptionList($options, function ($value) {
+		$optList = $this->makeOptionList($this->translate($options), function ($value) {
 			return [
 				'selected' => $this->isValueSelected($value),
 				'disabled' => $this->isValueDisabled($value),
